@@ -40,7 +40,7 @@ function NavBar() {
                 to='/Contact'
                 className={currentPage === '/Blog' ? 'nav-link active' : 'nav-link'}
                 >
-                    Contact
+                Contact
                 </Link>
             </li>
             <li className="nav-item">
@@ -48,7 +48,7 @@ function NavBar() {
                 to='/Portfolio'
                 clasName ={currentPage === '/Portfolio' ? 'nav-link active' : 'nav-link'}
                 >
-                    Portfolio
+                Portfolio
                 </Link>
             </li>
         </ul>
