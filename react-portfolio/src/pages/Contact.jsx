@@ -1,21 +1,54 @@
-export default function Contact() {
+import {useState} from 'react';
+import '../App.css'
+
+const Contact = ()=>  {
+  const [form, setForm] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+ 
+
+  const handleInputChange = (e) => { 
+    const {name, value } = e.target;
+    setForm((data) => ({
+      ...data,
+      [name]: value,
+    }));
+  }
+  const handleFormSubmit = (e) => { 
+    e.preventDefault();
+    alert('Message sent!');
+    setForm('');
+  }
     return (
-      <div>
+      <div className ="container text-center">
         <h1>Contact Page</h1>
-        <p>
-          Integer cursus bibendum sem non pretium. Vestibulum in aliquet sem, quis
-          molestie urna. Aliquam semper ultrices varius. Aliquam faucibus sit amet
-          magna a ultrices. Aenean pellentesque placerat lacus imperdiet
-          efficitur. In felis nisl, luctus non ante euismod, tincidunt bibendum
-          mi. In a molestie nisl, eu sodales diam. Nam tincidunt lacus quis magna
-          posuere, eget tristique dui dapibus. Maecenas fermentum elementum
-          faucibus. Quisque nec metus vestibulum, egestas massa eu, sollicitudin
-          ipsum. Nulla facilisi. Sed ut erat ligula. Nam tincidunt nunc in nibh
-          dictum ullamcorper. Class aptent taciti sociosqu ad litora torquent per
-          conubia nostra, per inceptos himenaeos. Etiam ornare rutrum felis at
-          rhoncus. Etiam vel condimentum magna, quis tempor nulla.
-        </p>
+        <form className='form' onSubmit={handleFormSubmit}>
+          <input
+          value= {form.name}
+name= "name"
+onChange={handleInputChange}
+type='text'
+placeholder='Your Name'
+/>
+<input 
+value= {form.email}
+name='email'
+onChange={handleInputChange}
+type='text'
+placeholder='Email'
+/>
+<input 
+value={form.message}
+name='message'
+type='text'
+placeholder='Message'
+/>
+<button type='submit'>Submit</button>
+        </form>
       </div>
     );
   }
   
+  export default Contact;
