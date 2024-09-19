@@ -19,14 +19,7 @@ function NavBar() {
 
     return (
         <ul className="nav nav-tabs">
-            {/* <li className="nav-item">
-                <Link
-                    to="/"
-                    className={currentPage === '/' ? 'nav-link active' : 'nav-link'}
-                >
-                    Home
-                </Link>
-            </li> */}
+       
             <li className="nav-item">
                 <Link
                     to='/About'
@@ -46,9 +39,17 @@ function NavBar() {
             <li className="nav-item">
                 <Link 
                 to='/Portfolio'
-                clasName ={currentPage === '/Portfolio' ? 'nav-link active' : 'nav-link'}
+                className ={currentPage === '/Portfolio' ? 'nav-link active' : 'nav-link'}
                 >
                 Portfolio
+                </Link>
+            </li>
+            <li className="nav-item">
+                <Link
+                to='/Resume'
+                className={currentPage === '/Resume' ? 'nav-link active' : 'nav-link'}
+                >
+                Resume
                 </Link>
             </li>
         </ul>

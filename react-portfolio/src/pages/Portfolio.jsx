@@ -1,30 +1,3 @@
-// import { useState,useEffect } from "react";
-// import Projects from "../components/Projects";
-// import search from "../utils/API";
-
-
-
-// const Portfolio = () => {
-//     const [results, setResults] = useState([]);
-
-// const searchRepo = async (query) => {
-//     const {data} = await search(query);
-//     setResults(data.data);
-// };
-
-// useEffect(() => {
-//     searchRepo('LeenaCruz');
-// }, []);
-
-// return ( 
-//     <div> 
-//     <Projects results={results} />
-//     </div>
-// );
-// };
-
-// export default Portfolio;
-
 
 import { useEffect, useState } from "react";
 
