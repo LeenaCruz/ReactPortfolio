@@ -23,7 +23,7 @@ const Contact = ()=>  {
   }
     return (
       <div className ="container text-center">
-        <h1>Contact Page</h1>
+        <h1>Contact Me</h1>
         <form className='form' onSubmit={handleFormSubmit}>
           <input
           value= {form.name}
