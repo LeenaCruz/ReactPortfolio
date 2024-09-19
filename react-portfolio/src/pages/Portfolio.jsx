@@ -29,7 +29,7 @@ const UserRepos = () => {
 
     return (
         <div>
-            <h2>Leena's Portfolio</h2>
+            <h1>Leena's Portfolio</h1>
             <div className="repo-grid">
             {repos.map(repo => (
                 <div className="repo-card" key={repo.id}>
