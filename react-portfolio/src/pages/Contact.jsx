@@ -18,15 +18,15 @@ const Contact = ()=>  {
   const validateForm = () => {
     const newErrors = {};
     if (!form.name) { 
-      newErrors.name = 'Name is required';
+      newErrors.name = 'Name is required.';
     }
     if (!form.email) {
-      newErrors.email = 'Email is required!';
+      newErrors.email = 'Email is required.';
     } else if (!validateEmail(form.email)) { 
       newErrors.email = 'Invalid email';
     }
     if(!form.message) {
-      newErrors.message = 'Message is required';
+      newErrors.message = 'Message is required.';
     }
 
     setErrors(newErrors);
@@ -43,6 +43,12 @@ const Contact = ()=>  {
   }
 };
 
+const handleBlur = (e) => {
+  const {name, value} = e.target;
+  if(!value) { 
+    setErrors((prev)=> ({...prev, [name]:`${name} is required`}))
+  }
+}
 
   const handleInputChange = (e) => { 
     const {name, value } = e.target;
@@ -64,6 +70,7 @@ const Contact = ()=>  {
           value= {form.name}
 name= "name"
 onChange={handleInputChange}
+onBlur = {handleBlur}
 type='text'
 placeholder='Your Name'
 />
@@ -72,6 +79,7 @@ placeholder='Your Name'
 value= {form.email}
 name='email'
 onChange={handleInputChange}
+onBlur = {handleBlur}
 type='text'
 placeholder='Email'
 />
@@ -80,6 +88,7 @@ placeholder='Email'
 value={form.message}
 name='message'
 onChange={handleInputChange}
+onBlur = {handleBlur}
 type='text'
 placeholder='Message'
 />

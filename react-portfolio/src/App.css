@@ -15,7 +15,6 @@
 .header {
   background-color: #635CA0;
   height: 80px;
-  color: #B787D2;
   padding: 0 10px;
   width: 100vw;
   position: relative;
@@ -35,6 +34,8 @@
 .header h1 {
   margin: 10px;
   text-align: center;
+  color: #333565;
+  font-weight: bold;
 }
 
 .nav-tabs {
@@ -42,7 +43,9 @@
   justify-content: space-around;
   padding: 10px 0;
   /* align-items: center; */
+  text-decoration: none;
   border: none;
+  background-color: transparent;
 }
 
 .nav-tabs a {
@@ -52,6 +55,28 @@
   text-align: center;
   padding: 10px;
 
+}
+
+.nav-tabs a:hover, 
+.nav-tabs a:focus,
+.nav-tabs a:active {
+  background-color: #B787D2;
+  color:#333565;
+  border: none;
+  border-width: 0;
+  fill: none;
+}
+
+.nav-item {
+  background-color: transparent;
+  text-decoration: none;
+  border: none;
+}
+
+.nav-item.active {
+  background-color: #B787D2;
+  color:#333565;
+  border: none;
 }
 
 html,
@@ -97,7 +122,6 @@ main {
 
   height: 200px;
   width: 100%;
-  /* padding: 10px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -208,4 +232,9 @@ padding: 5px;
     width: 100%;
     text-align: center;
   }
+}
+
+.about-content {
+  margin-top: 20px;
+  padding: 10px;
 }

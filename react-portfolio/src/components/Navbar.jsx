@@ -1,17 +1,3 @@
-// export default function Navigation ({links}) {
-//     return (
-//         <nav className="navbar navbar-expand-lg bg-secondary">
-//             <div className="container-fluid">
-//                 <div className=" collapse navbar-collapse" id="navbarSupportedContent">
-//                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-//                         {links.map((link) => link)}
-//                         </ul>
-//                 </div>
-//             </div>
-//         </nav>
-//     );
-// }
-
 import { Link, useLocation } from "react-router-dom";
 
 function NavBar() {
@@ -25,15 +11,7 @@ function NavBar() {
                     to='/About'
                     className={currentPage === '/About' ? 'nav-link active' : 'nav-link'}
                 > 
-                About
-                </Link>
-            </li>
-            <li className="nav-item"> 
-                <Link 
-                to='/Contact'
-                className={currentPage === '/Blog' ? 'nav-link active' : 'nav-link'}
-                >
-                Contact
+                About Me
                 </Link>
             </li>
             <li className="nav-item">
@@ -42,6 +20,14 @@ function NavBar() {
                 className ={currentPage === '/Portfolio' ? 'nav-link active' : 'nav-link'}
                 >
                 Portfolio
+                </Link>
+            </li>
+            <li className="nav-item"> 
+                <Link 
+                to='/Contact'
+                className={currentPage === '/Contact' ? 'nav-link active' : 'nav-link'}
+                >
+                Contact
                 </Link>
             </li>
             <li className="nav-item">

@@ -6,7 +6,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #97C7DB;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -24,7 +24,7 @@
 a {
   font-weight: 500;
   color: #B787D2;
-  text-decoration: inherit;
+  text-decoration: none;
 }
 a:hover {
   color: #B787D2;
