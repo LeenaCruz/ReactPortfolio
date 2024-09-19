@@ -56,8 +56,9 @@ const Contact = ()=>  {
   }
  
     return (
-      <div className ="container text-center">
-        <h1>Contact Me</h1>
+      <div className='contact'>
+               <h1>Contact Me</h1>
+       
         <form className='form' onSubmit={handleFormSubmit}>
           <input
           value= {form.name}
@@ -87,6 +88,7 @@ placeholder='Message'
 <button type='submit'>Submit</button>
 </div>
         </form>
+     
       </div>
     );
   }
