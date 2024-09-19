@@ -96,14 +96,21 @@ footer {
 
 }
 
-main {
+/* main {
   display: flex;
   justify-content: center;
-  text-align: center;
+  align-items: center;
+} */
+.main-content{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .main-content h1 {
   color: #333565;
+  margin: 10px;
 }
 
 .form {
@@ -155,4 +162,13 @@ main {
 
 .repo-card:hover .repo-image span {
   color: #B787D2;
+}
+
+.resume h1 {
+  margin-top: 20px;
+}
+.resume-list {
+list-style-type: none;
+padding: 0;
+margin: 0;
 }
