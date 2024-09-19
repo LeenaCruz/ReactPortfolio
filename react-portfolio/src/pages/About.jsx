@@ -1,4 +1,4 @@
-import myPortrait from "../assets/Leena250px.png";
+import myPortrait from "/assets/Leena250px.png";
 export default function About() {
     return (
       <div className="main-content">
