@@ -3,7 +3,7 @@
 Welcome to my Portfolio, this is a place where I showcase my most recent projects. I used React, Bootstrap and other technologies to build it. You can check it at the link below.
 
 # Deployed URL 
-[Link to Portfolio](https://66ecb16fb962d587fb8f8b8e--leena-portfolio.netlify.app/)
+[Link to Portfolio](https://leena-portfolio.netlify.app/)
 
 # Questions 
 
