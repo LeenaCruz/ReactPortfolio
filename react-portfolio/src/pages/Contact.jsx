@@ -18,15 +18,15 @@ const Contact = () => {
   const validateForm = () => {
     const newErrors = {};
     if (!form.name) {
-      newErrors.name = 'Name is required.';
+      newErrors.name = 'Name is required!';
     }
     if (!form.email) {
-      newErrors.email = 'Email is required.';
+      newErrors.email = 'Email is required!';
     } else if (!validateEmail(form.email)) {
-      newErrors.email = 'Invalid email';
+      newErrors.email = 'Invalid email.';
     }
     if (!form.message) {
-      newErrors.message = 'Message is required.';
+      newErrors.message = 'Message is required!';
     }
 
     setErrors(newErrors);
@@ -74,7 +74,7 @@ const Contact = () => {
           type='text'
           placeholder='Your Name'
         />
-        {errors.name && <span style={{ color: 'red' }}> {errors.name}</span>}
+        {errors.name && <div style={{ color: 'red' }}> {errors.name}</div>}
         <input
           value={form.email}
           name='email'
@@ -83,7 +83,7 @@ const Contact = () => {
           type='text'
           placeholder='Email'
         />
-        {errors.email && <span style={{ color: 'red' }}> {errors.email}</span>}
+        {errors.email && <div style={{ color: 'red' }}> {errors.email}</div>}
         <input
           value={form.message}
           name='message'
@@ -92,7 +92,7 @@ const Contact = () => {
           type='text'
           placeholder='Message'
         />
-        {errors.message && <span style={{ color: 'red' }}> {errors.message}</span>}
+        {errors.message && <div style={{ color: 'red' }}> {errors.message}</div>}
         <div>
           <button type='submit'>Submit</button>
         </div>
