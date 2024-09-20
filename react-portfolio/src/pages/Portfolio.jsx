@@ -1,5 +1,6 @@
 
 import { useEffect, useState } from "react";
+import Projects from "../components/Projects";
 
 const UserRepos = () => {
     const [repos, setRepos] = useState([]);
@@ -14,7 +15,7 @@ const UserRepos = () => {
                     throw new Error('Something went wrong');
                 }
                 const data = await response.json();
-                setRepos(data.slice(0,6));
+                setRepos(data.slice(0, 6));
             } catch (error) {
                 setError(error);
             } finally {
@@ -30,22 +31,7 @@ const UserRepos = () => {
     return (
         <div>
             <h1>Leena's Portfolio</h1>
-            <div className="repo-grid">
-            {repos.map(repo => (
-                <div className="repo-card" key={repo.id}>
-                    <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
-                        <div
-                            className="repo-image"
-                            style={{
-                                backgroundColor: '#635CA0'
-                        }}
-                        >
-                        <span className="repo-name"> {repo.name} </span>
-                        </div>
-                    </a>
-                </div>
-            ))}
-</div>
+            < Projects repos={repos} />
         </div>
     )
 }
